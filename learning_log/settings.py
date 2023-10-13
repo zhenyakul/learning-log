@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-%ok4uh555_)++_fvs#zxagj%dl8q+z@9ex7@!2$-63j)1b)n2*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -133,8 +133,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = '/users/login/'
 
 #настройки heroku
-import django_heroku
-django_heroku.settings(locals())
+
 
 if os.environ.get('DEBUG') == 'TRUE':
     DEBUG = True
